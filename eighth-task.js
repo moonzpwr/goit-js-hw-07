@@ -27,8 +27,6 @@ console.log(inputEl.value);
 createButtonEl.addEventListener("click", createBoxes);
 clearButtonEl.addEventListener("click", destroyBoxes);
 
-// console.log(getRandomColor());
-
 function createBoxes(amount) {
   amount = inputEl.value;
 
