@@ -21,7 +21,6 @@ const boxesContainerEl = document.querySelector("div#boxes");
 const inputEl = document.querySelector("#controls > input");
 const createButtonEl = document.querySelector("[data-action='render']");
 const clearButtonEl = document.querySelector("[data-action='destroy']");
-const createdBoxesEl = document.querySelector("#createdBoxes");
 console.log(inputEl.value);
 
 createButtonEl.addEventListener("click", createBoxes);
@@ -56,11 +55,11 @@ function getRandomColor() {
   let color = "";
   for (let i = 0; i < 3; i += 1) {
     const sub = Math.floor(Math.random() * 256).toString(16);
-    color += sub.length == 1 ? "0" + sub : sub;
+    color += sub.length === 1 ? "0" + sub : sub;
   }
   return color;
 }
 
 function destroyBoxes() {
-  location.reload();
+  boxesContainerEl.innerHTML = "";
 }

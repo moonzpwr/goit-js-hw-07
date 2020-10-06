@@ -14,8 +14,8 @@ const ingredients = [
 
 const ingredientsContainerEl = document.querySelector("#ingredients");
 
-// const elemets = []
-const elemets = ingredients.map(function (option) {
+// const elements = []
+const elements = ingredients.map(function (option) {
   const ingridientEl = document.createElement("li");
   ingridientEl.textContent = option;
   return ingridientEl;
@@ -27,4 +27,4 @@ const elemets = ingredients.map(function (option) {
 //   elemets.push(ingridientEl);
 // }
 
-ingredientsContainerEl.append(...elemets);
+ingredientsContainerEl.append(...elements);

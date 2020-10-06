@@ -13,7 +13,7 @@ function validation(event) {
   const letngthOfInput = event.currentTarget.value.length;
   const requiredLength = inputEl.dataset.length;
 
-  if (letngthOfInput < requiredLength) {
+  if (letngthOfInput > requiredLength || letngthOfInput < requiredLength) {
     inputEl.classList.add("invalid");
     inputEl.classList.remove("valid");
   } else {
